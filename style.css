@@ -1,0 +1,227 @@
+::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+==========
+fonts
+==========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+/*
+===========
+variables
+===========
+*/
+:root {
+  --clr-primary-1: #de855f;
+  --clr-white: #ffffff;
+  --clr-black: #171717;
+  --clr-dark: #1b1b1b;
+  --font-family: "Poppins", sans-serif;
+  --ff-weight-1: 400;
+  --ff-weight-2: 500;
+  --ff-weight-3: 700;
+  --border-radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*
+==============
+global styles
+==============
+*/
+body {
+  font-family: var(--font-family);
+  background-color: var(--clr-white);
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+img {
+  display: block;
+}
+
+.btn {
+  text-transform: capitalize;
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+  padding: 0.9rem 1.3rem;
+  display: inline-flex;
+  /* gap: 1.325rem; */
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: var(--ff-weight-2);
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+/*
+===========
+hero
+===========
+*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/background img.png") center/cover no-repeat;
+  min-height: 97vh;
+  display: grid;
+  align-items: center;
+}
+.hero-banner {
+  width: 100%;
+  padding: 3rem;
+  margin: 0 auto;
+}
+.hero-banner h1 {
+  font-size: 2.8rem;
+  max-width: 30rem;
+  color: var(--clr-white);
+  font-weight: var(--ff-weight-3);
+}
+.hero-banner p {
+  color: var(--clr-white);
+  margin-top: 1rem;
+  max-width: 30rem;
+  font-size: 1.2rem;
+}
+.hero-btns {
+  margin-top: 1.4rem;
+}
+.hero-btn p {
+  margin-top: 0;
+}
+@media screen and (min-width: 1170px) and (max-width: 1400px) {
+  .hero-banner {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}
+
+/*
+============
+travel-info
+============
+*/
+.travel-info {
+  transform: translate(0%, -50%);
+}
+.form-center {
+  margin: 0 auto;
+  max-width: 540px;
+  padding: 1rem;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  border-radius: var(--border-radius);
+  width: 90%;
+}
+
+#destination {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0;
+}
+.dates {
+  margin-top: 1.3rem;
+}
+#date {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0;
+}
+#from {
+  border-top: 0;
+  border-left: 0;
+  width: 50%;
+  height: 2.5rem;
+}
+#check-in {
+  border-top: 0;
+  border-left: 0;
+  width: 50%;
+}
+#check-out {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 50%;
+}
+#to {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 50%;
+}
+input {
+  margin-left: 0;
+  padding: 0.7rem;
+}
+.des-title {
+  color: rgba(23, 23, 23, 0.7);
+  /* margin-bottom: 0.5rem; */
+}
+.date-title {
+  color: rgba(23, 23, 23, 0.7);
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+}
+input::placeholder {
+  padding: 0.5rem;
+}
+.dates-btn {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  .form-center {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .form-center {
+    max-width: 760px;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .form-btn {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .dates {
+    margin-top: 0rem;
+  }
+  .dates-btn {
+    margin-top: 0;
+  }
+  .date-title {
+    top: 0;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .form-center {
+    max-width: 992px;
+  }
+}
